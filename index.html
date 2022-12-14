@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Infinity</title>
+        <link rel="icon" href="./src/assets/images/favicon.png" />
+        <meta name="keywords" content="surviving, zombie, apocalypse" />
+        <meta name="description" content="Surviving the Zombie Apocalypse has never been more fun!" />
+        <meta name="author" content="Fiverr: karen_werner | LinkedIn https://www.linkedin.com/in/karenabgaryan09/" />
+        <!-- OPEN GRAPH -->
+        <meta property="og:title" content="infinity" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Surviving the Zombie Apocalypse has never been more fun!" />
+        <meta property="og:image" content="./src/assets/images/icons/banner.png" />
+        <meta property="og:url" content="https://sample.com" />
+        <!-- TWITTER CARDS -->
+        <meta name="twitter:title" content="infinity" />
+        <meta name="twitter:description" content="Surviving the Zombie Apocalypse has never been more fun!" />
+        <meta name="twitter:image" content="./src/assets/images/icons/banner.png" />
+        <meta name="twitter:url" content="https://sample.com" />
+        <meta name="twitter:card" content="summary" />
+        <!-- STYLESHEET -->
+        <link rel="stylesheet" href="./src/styles/index.css" />
+        <!-- SCRIPTS -->
+        <script src="./src/components/navbar/navbar.js" defer></script>
+        <script src="/src/scripts/lazy-load/lazy-load.js" defer></script>
+        <!-- SWIPER -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
+        <script src="/src/components/swiper/swiper.js" defer></script>
+    </head>
+    <body>
+        <header class="hero" data-cover-src="src/assets/images/header-cover.jpg" data-lazy-block>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/index.html"
+                        ><img src="./src/assets/images/icons/logo.png" alt=""
+                    /></a>
+                    <button
+                        class="navbar-toggler altCollapsed"
+                        type="button"
+                        data-toggle="altCollapse"
+                        data-target=".navbar-collapse"
+                    >
+                        <div class="burger">
+                            <span></span>
+                        </div>
+                    </button>
+                    <div class="navbar-collapse altCollapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#"
+                                    >white paper
+                                    <!-- <div class="underbrush underbrush-red">
+                                        <img class="image image-red" src="/src/assets/images/icons/brush.png" alt="" />
+                                    </div> -->
+                                    <div class="underbrush underbrush-red">
+                                        <img class="image image-red" src="/src/assets/images/icons/brush.png" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"
+                                    >roadmap
+
+                                    <div class="underbrush underbrush-red">
+                                        <img class="image image-red" src="/src/assets/images/icons/brush.png" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="brush-btn">
+                                    <img src="/src/assets/images/icons/brush.png" alt="" />
+                                    <a class="nav-link" href="#">marketplace</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="hero-wrapper">
+                    <div class="hero-images">
+                        <div class="image-group">
+                            <img
+                                class="img img-2"
+                                src="/src/assets/images/nft-person-2.png"
+                                alt=""
+                                data-lazy="bounce-right"
+                            />
+                            <img
+                                class="img img-3"
+                                src="/src/assets/images/nft-person-3.png"
+                                alt=""
+                                data-lazy="bounce-left"
+                                data-lazy-delay="500"
+                            />
+                            <img
+                                class="img img-1"
+                                src="/src/assets/images/nft-person-1.png"
+                                alt=""
+                                data-lazy="fade"
+                                data-lazy-delay="1000"
+                            />
+                        </div>
+                    </div>
+                    <div class="hero-content">
+                        <img
+                            class="hero-banner"
+                            src="/src/assets/images/icons/banner.png"
+                            alt=""
+                            data-lazy="scale"
+                            data-lazy-delay="1200"
+                        />
+                        <p class="hero-description">Surviving the Zombie Apocalypse has never been more fun!</p>
+                        <div class="socials">
+                            <img src="/src/assets/images/icons/second-brush.png" alt="" class="socials-img" />
+                            <ul class="socials-list">
+                                <li class="socials-item">
+                                    <a href="#" class="socials-link">
+                                        <span class="startIcon">
+                                            <svg
+                                                width="39"
+                                                height="47"
+                                                viewBox="0 0 39 47"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M32.2934 24.9711C32.2934 20.9855 34.4225 17.578 37.4446 16.1445C36.6033 15.0447 35.4753 14.0107 33.9572 12.9297C31.9926 11.5291 27.6404 11.3693 24.7875 12.0978C22.6208 12.6477 20.7737 13.7099 19.7867 13.7569C18.8937 13.8039 16.9761 12.6101 14.7859 12.0978C12.1445 11.4774 9.26339 11.8252 7.28469 12.9297C1.53189 16.1445 0.610687 19.4298 0.610687 26.2166C0.610687 34.0374 3.44479 40.6691 9.78039 45.3221C11.1716 46.342 13.672 46.9436 15.6178 46.154C17.291 45.4725 18.184 44.6406 19.7867 44.4949C22.1273 44.2834 23.2177 45.0683 24.3457 45.7686C25.3703 46.4031 27.7344 46.9154 28.9564 46.1587C33.2381 43.5079 36.608 39.1745 38.3893 34.1737C34.8737 33.0457 32.2934 29.3562 32.2934 24.9711ZM27.2879 7.1158C28.9893 4.4462 28.994 0.4559 28.9564 0.47C28.2514 0.705 25.8732 0.1504 22.2871 2.961C21.0369 3.9433 19.5 6.3591 18.9501 7.943C18.5318 9.1462 18.1229 12.0931 18.1135 12.0978C18.0712 12.1025 20.863 11.9474 22.2824 11.2659C23.7394 10.5703 26.1881 8.8454 27.2879 7.1158Z"
+                                                    fill="white"
+                                                />
+                                            </svg>
+                                        </span>
+                                        IOS
+                                    </a>
+                                </li>
+                                <li class="socials-item">
+                                    <a href="#" class="socials-link">
+                                        <span class="startIcon">
+                                            <svg
+                                                width="52"
+                                                height="51"
+                                                viewBox="0 0 52 51"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M39.3567 37.741C39.3567 38.8069 38.48 39.6719 37.3911 39.6719H14.6255C13.5387 39.6719 12.6588 38.807 12.6588 37.741V17.7929C18.6264 17.7715 32.5478 17.7715 39.3567 17.7929V37.741Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M21.0923 7.56533C21.2046 7.78158 21.1193 8.05192 20.8958 8.16408C20.6743 8.27425 20.3987 8.18759 20.2864 7.97034L17.4087 2.46952C17.2944 2.25028 17.3858 1.98502 17.6074 1.87186C17.8289 1.7596 18.1024 1.84636 18.2167 2.0647L21.0924 7.56553L21.0923 7.56533Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M31.5733 7.79692C31.4485 8.01009 31.172 8.0835 30.9535 7.9571C30.7372 7.83667 30.6633 7.56543 30.7902 7.35217L33.9414 2.00016C34.0662 1.78799 34.3449 1.71258 34.5591 1.83799C34.7775 1.95932 34.8513 2.23175 34.7266 2.44282L31.5732 7.79682L31.5733 7.79692Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M46.307 32.3319C46.307 33.8833 45.0258 35.143 43.4408 35.143C41.8558 35.143 40.5715 33.8843 40.5715 32.3319V20.0297C40.5715 18.4751 41.8548 17.2196 43.4408 17.2196C45.0248 17.2196 46.307 18.4752 46.307 20.0297V32.3319Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M11.4254 32.3319C11.4254 33.8833 10.14 35.143 8.56019 35.143C6.97419 35.143 5.69186 33.8843 5.69186 32.3319V20.0297C5.69186 18.4751 6.97308 17.2196 8.56019 17.2196C10.14 17.2196 11.4254 18.4752 11.4254 20.0297V32.3319Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M23.9075 46.411C23.9075 47.9624 22.6242 49.2221 21.0371 49.2221C19.4553 49.2221 18.1741 47.9634 18.1741 46.411V34.1087C18.1741 32.5583 19.4553 31.2956 21.0371 31.2956C22.6231 31.2956 23.9075 32.5583 23.9075 34.1087V46.411Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M33.851 46.411C33.851 47.9624 32.5676 49.2221 30.9816 49.2221C29.3998 49.2221 28.1154 47.9634 28.1154 46.411V34.1087C28.1154 32.5583 29.3988 31.2956 30.9816 31.2956C32.5666 31.2956 33.851 32.5583 33.851 34.1087V46.411Z"
+                                                    fill="white"
+                                                />
+                                                <path
+                                                    d="M26.0083 4.64807C19.0362 4.64807 13.2943 9.85216 12.5268 16.5413H39.4888C38.7234 9.85216 32.9847 4.64817 26.0083 4.64817V4.64807ZM19.9253 11.8585C19.3034 11.8585 18.8011 11.3679 18.8011 10.76C18.8011 10.1542 19.3034 9.6635 19.9253 9.6635C20.541 9.6635 21.0433 10.1541 21.0433 10.76C21.0433 11.3679 20.541 11.8585 19.9253 11.8585ZM32.1152 11.8585C31.4953 11.8585 30.993 11.3679 30.993 10.76C30.993 10.1542 31.4953 9.6635 32.1152 9.6635C32.7371 9.6635 33.2353 10.1541 33.2353 10.76C33.2353 11.3679 32.7372 11.8585 32.1152 11.8585Z"
+                                                    fill="white"
+                                                />
+                                            </svg>
+                                        </span>
+                                        android
+                                    </a>
+                                </li>
+                                <li class="socials-item">
+                                    <a href="#" class="socials-link">
+                                        <span class="startIcon">
+                                            <svg
+                                                width="59"
+                                                height="61"
+                                                viewBox="0 0 59 61"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <g filter="url(#filter0_d_13_40)">
+                                                    <path
+                                                        d="M54.1259 24.9682V0.672058L26.2277 4.73823V24.9682H54.1259Z"
+                                                        fill="white"
+                                                    />
+                                                    <path
+                                                        d="M24.2602 5.03083L4 7.98712V24.9682H24.2602V5.03083Z"
+                                                        fill="white"
+                                                    />
+                                                    <path
+                                                        d="M4 27.7428V44.9358L24.2602 47.9223V27.7428H4Z"
+                                                        fill="white"
+                                                    />
+                                                    <path
+                                                        d="M26.2277 48.2149L54.1259 52.3316V27.7428H26.2277V48.2149Z"
+                                                        fill="white"
+                                                    />
+                                                </g>
+                                                <defs>
+                                                    <filter
+                                                        id="filter0_d_13_40"
+                                                        x="0"
+                                                        y="0.672058"
+                                                        width="58.1259"
+                                                        height="59.6595"
+                                                        filterUnits="userSpaceOnUse"
+                                                        color-interpolation-filters="sRGB"
+                                                    >
+                                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                        <feColorMatrix
+                                                            in="SourceAlpha"
+                                                            type="matrix"
+                                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                            result="hardAlpha"
+                                                        />
+                                                        <feOffset dy="4" />
+                                                        <feGaussianBlur stdDeviation="2" />
+                                                        <feComposite in2="hardAlpha" operator="out" />
+                                                        <feColorMatrix
+                                                            type="matrix"
+                                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                                                        />
+                                                        <feBlend
+                                                            mode="normal"
+                                                            in2="BackgroundImageFix"
+                                                            result="effect1_dropShadow_13_40"
+                                                        />
+                                                        <feBlend
+                                                            mode="normal"
+                                                            in="SourceGraphic"
+                                                            in2="effect1_dropShadow_13_40"
+                                                            result="shape"
+                                                        />
+                                                    </filter>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                        launcher
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="home-page">
+            <section class="trailer">
+                <div class="container">
+                    <div class="trailer-wrapper">
+                        <div class="trailer-content">
+                            <div class="wrapper">
+                                <h2 class="display-2 trailer-title">game <span class="text-success">preview</span></h2>
+                                <p class="trailer-description">
+                                    <span class="trailer-description-inner">
+                                        Watch the trailer to get a feel for what is coming.<br />
+                                        <b>Trigger warning:</b> <br />
+                                    </span>
+                                    Some people may experience an accelerated survival instinct (fight) or the urge to
+                                    run (flight).
+                                </p>
+                            </div>
+                            <div class="video-wrapper">
+                                <video
+                                    src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                                ></video>
+                                <img
+                                    class="img video-placeholder"
+                                    src="/src/assets/images/video-placeholder.png"
+                                    alt=""
+                                />
+                                <img class="img play" src="/src/assets/images/icons/play.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="trailer-image" data-lazy-block>
+                            <div class="image-wrapper" data-lazy-delay="500" data-lazy="bounce-left">
+                                <img src="/src/assets/images/zombie.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="nft">
+                <div class="container">
+                    <div class="nft-wrapper">
+                        <div class="nft-cover" data-lazy-block>
+                            <div class="cover-wrapper" data-lazy="bounce-down">
+                                <img src="/src/assets/images/zombie-2.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="nft-content">
+                            <div class="wrapper">
+                                <h2 class="display-2 nft-title"><span class="text-success">NFT</span> avatar</h2>
+                                <ul class="nft-list">
+                                    <li class="nft-item">Upgrade your game with a custom avatar</li>
+                                    <li class="nft-item">Accessorise</li>
+                                    <li class="nft-item">Get awesome weapons</li>
+                                </ul>
+                            </div>
+                            <div class="swiper-custom-wrapper" id="nft-swiper">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="nft-image-wrapper">
+                                                <img
+                                                    class="nft-image"
+                                                    src="/src/assets/images/nft-image-1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="nft-image-wrapper">
+                                                <img
+                                                    class="nft-image"
+                                                    src="/src/assets/images/nft-image-2.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="nft-image-wrapper">
+                                                <img
+                                                    class="nft-image"
+                                                    src="/src/assets/images/nft-image-3.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="nft-image-wrapper">
+                                                <img
+                                                    class="nft-image"
+                                                    src="/src/assets/images/nft-image-3.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="nft-image-wrapper">
+                                                <img
+                                                    class="nft-image"
+                                                    src="/src/assets/images/nft-image-3.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="btn-center">
+                                <div class="brush-btn brush-btn-lg">
+                                    <img src="/src/assets/images/icons/brush.png" alt="" />
+                                    <a href="#/">buy nft</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="road-map" data-lazy-block>
+                <div class="container-sm">
+                    <h2 class="display-2 road-map-title">road <span class="text-danger">map</span></h2>
+                    <div class="phase-group" >
+                        <div class="phase" data-lazy="fade-right" data-lazy-delay="300">
+                            <h3 class="phase-title display-3">phase 1</h3>
+                            <ul class="phase-list">
+                                <li class="phase-item">Video trailer</li>
+                                <li class="phase-item">Stand alone single player game</li>
+                                <li class="phase-item">Game core mechanics</li>
+                                <li class="phase-item">Introduction to the world and lore</li>
+                            </ul>
+                        </div>
+                        <div class="phase" data-lazy="fade-down" data-lazy-delay="300">
+                            <h3 class="phase-title display-3">phase 2</h3>
+                            <ul class="phase-list">
+                                <li class="phase-item">Alpha version of the game</li>
+                                <li class="phase-item">Super 8 weapon customization</li>
+                                <li class="phase-item">NFT integration Multiplayer PVE</li>
+                                <li class="phase-item">Introduction of the Tower of Prizes</li>
+                            </ul>
+                        </div>
+                        <div class="phase" data-lazy="fade-left" data-lazy-delay="300">
+                            <div class="wrapper">
+                                <h3 class="phase-title display-3">phase 3</h3>
+                                <ul class="phase-list">
+                                    <li class="phase-item">Guild system</li>
+                                    <li class="phase-item">Social System</li>
+                                    <li class="phase-item">PVP integration</li>
+                                    <li class="phase-item">Season Challenges</li>
+                                    <li class="phase-item">Season Content</li>
+                                    <li class="phase-item">RaidSystem</li>
+                                    <li class="phase-item">Launch of the Tower of Prizes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team-members">
+                <div class="container">
+                    <h2 class="display-2 team-members-title">team <span class="text-success">members</span></h2>
+                    <div class="team-members-wrapper">
+                        <div class="card-group zombie-card-group">
+                            <div class="card zombie-card">
+                                <div class="card-image-wrapper"></div>
+                                <h4 class="card-title display-4">lorem ipsum</h4>
+                                <h6 class="card-subtitle display-6">lorem ipsum</h6>
+                                <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
+                            </div>
+                            <div class="card zombie-card">
+                                <div class="card-image-wrapper"></div>
+                                <h4 class="card-title display-4">lorem ipsum</h4>
+                                <h6 class="card-subtitle display-6">lorem ipsum</h6>
+                                <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
+                            </div>
+                            <div class="card zombie-card">
+                                <div class="card-image-wrapper"></div>
+                                <h4 class="card-title display-4">lorem ipsum</h4>
+                                <h6 class="card-subtitle display-6">lorem ipsum</h6>
+                                <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
+                            </div>
+                            <div class="card zombie-card">
+                                <div class="card-image-wrapper"></div>
+                                <h4 class="card-title display-4">lorem ipsum</h4>
+                                <h6 class="card-subtitle display-6">lorem ipsum</h6>
+                                <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
+                            </div>
+                            <div class="card zombie-card">
+                                <div class="card-image-wrapper"></div>
+                                <h4 class="card-title display-4">lorem ipsum</h4>
+                                <h6 class="card-subtitle display-6">lorem ipsum</h6>
+                                <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
+                            </div>
+                            <div class="card zombie-card">
+                                <div class="card-image-wrapper"></div>
+                                <h4 class="card-title display-4">lorem ipsum</h4>
+                                <h6 class="card-subtitle display-6">lorem ipsum</h6>
+                                <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
+                            </div>
+                            <div class="card zombie-card">
+                                <div class="card-image-wrapper"></div>
+                                <h4 class="card-title display-4">lorem ipsum</h4>
+                                <h6 class="card-subtitle display-6">lorem ipsum</h6>
+                                <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
+                            </div>
+                            <div class="card zombie-card">
+                                <div class="card-image-wrapper"></div>
+                                <h4 class="card-title display-4">lorem ipsum</h4>
+                                <h6 class="card-subtitle display-6">lorem ipsum</h6>
+                                <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
+                            </div>
+                        </div>
+                        <div class="team-members-cover" data-lazy-block="">
+                            <img src="/src/assets/images/zombie-3.png" alt="" data-lazy="bounce-right"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="investors" data-lazy-block>
+                <div class="container-sm">
+                    <h2 class="display-2 investors-title text-success">investors</h2>
+                    <ul class="investors-list">
+                        <li class="investors-item" data-lazy="bounce-up">
+                            <img src="/src/assets/images/icons/investors-icon.png" alt="" />
+                        </li>
+                        <li class="investors-item" data-lazy="bounce-up">
+                            <img src="/src/assets/images/icons/investors-icon.png" alt="" />
+                        </li>
+                        <li class="investors-item" data-lazy="bounce-up">
+                            <img src="/src/assets/images/icons/investors-icon.png" alt="" />
+                        </li>
+                        <li class="investors-item" data-lazy="bounce-up">
+                            <img src="/src/assets/images/icons/investors-icon.png" alt="" />
+                        </li>
+                        <li class="investors-item" data-lazy="bounce-up">
+                            <img src="/src/assets/images/icons/investors-icon.png" alt="" />
+                        </li>
+                        <li class="investors-item" data-lazy="bounce-up">
+                            <img src="/src/assets/images/icons/investors-icon.png" alt="" />
+                        </li>
+                        <li class="investors-item" data-lazy="bounce-up">
+                            <img src="/src/assets/images/icons/investors-icon.png" alt="" />
+                        </li>
+                        <li class="investors-item" data-lazy="bounce-up">
+                            <img src="/src/assets/images/icons/investors-icon.png" alt="" />
+                        </li>
+                        <li class="investors-item" data-lazy="bounce-up">
+                            <img src="/src/assets/images/icons/investors-icon.png" alt="" />
+                        </li>
+                    </ul>
+                    <div class="investors-cover">
+                        <div class="cover-wrapper">
+                            <img src="/src/assets/images/zombie-2.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-wrapper">
+                    <div class="footer-content" >
+                        <img class="footer-banner" src="/src/assets/images/icons/banner.png" alt="" />
+                        <p class="footer-description">
+                            All character depicted on this site and in the Z-Infinity Game are the original work of our
+                            team
+                        </p>
+                        <div class="socials">
+                            <ul class="socials-list" data-lazy-block>
+                                <a href="#/" class="socials-link" data-lazy="bounce-left">
+                                    <svg
+                                        width="65"
+                                        height="65"
+                                        viewBox="0 0 65 65"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M32.5 5.4165C17.5419 5.4165 5.41666 17.5417 5.41666 32.4998C5.41666 46.0767 15.4185 57.2892 28.451 59.2473V39.6769H21.7506V32.5567H28.451V27.8198C28.451 19.9765 32.2725 16.5342 38.7915 16.5342C41.9142 16.5342 43.5635 16.7644 44.3462 16.87V23.083H39.8992C37.1312 23.083 36.1644 25.7073 36.1644 28.6648V32.5567H44.2758L43.1762 39.6769H36.1671V59.3042C49.3865 57.514 59.5833 46.2094 59.5833 32.4998C59.5833 17.5417 47.4581 5.4165 32.5 5.4165Z"
+                                            fill="#E50D42"
+                                        />
+                                    </svg>
+                                </a>
+                                <a href="#/" class="socials-link" data-lazy="bounce-left">
+                                    <svg
+                                        width="75"
+                                        height="75"
+                                        viewBox="0 0 75 75"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M25 9.375C16.3719 9.375 9.375 16.3719 9.375 25V50C9.375 58.6281 16.3719 65.625 25 65.625H50C58.6281 65.625 65.625 58.6281 65.625 50V25C65.625 16.3719 58.6281 9.375 50 9.375H25ZM56.25 15.625C57.975 15.625 59.375 17.025 59.375 18.75C59.375 20.475 57.975 21.875 56.25 21.875C54.525 21.875 53.125 20.475 53.125 18.75C53.125 17.025 54.525 15.625 56.25 15.625ZM37.5 21.875C46.1281 21.875 53.125 28.8719 53.125 37.5C53.125 46.1281 46.1281 53.125 37.5 53.125C28.8719 53.125 21.875 46.1281 21.875 37.5C21.875 28.8719 28.8719 21.875 37.5 21.875ZM37.5 28.125C35.0136 28.125 32.629 29.1127 30.8709 30.8709C29.1127 32.629 28.125 35.0136 28.125 37.5C28.125 39.9864 29.1127 42.371 30.8709 44.1291C32.629 45.8873 35.0136 46.875 37.5 46.875C39.9864 46.875 42.371 45.8873 44.1291 44.1291C45.8873 42.371 46.875 39.9864 46.875 37.5C46.875 35.0136 45.8873 32.629 44.1291 30.8709C42.371 29.1127 39.9864 28.125 37.5 28.125Z"
+                                            fill="#E50D42"
+                                        />
+                                    </svg>
+                                </a>
+                                <a href="#/" class="socials-link" data-lazy="bounce-left">
+                                    <svg
+                                        width="74"
+                                        height="74"
+                                        viewBox="0 0 74 74"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M67.8333 12.3301C65.4283 13.7577 60.6029 15.7032 57.7663 16.2644C57.683 16.286 57.6152 16.3137 57.535 16.3353C55.0283 13.8625 51.5934 12.3301 47.7917 12.3301C40.1296 12.3301 33.9167 18.543 33.9167 26.2051C33.9167 26.609 33.8828 27.3521 33.9167 27.7467C23.5783 27.7467 15.7096 22.3324 10.0671 15.4134C9.45351 16.9551 9.18526 19.3909 9.18526 21.6787C9.18526 25.9985 12.5615 30.2412 17.8186 32.8712C16.8504 33.121 15.7836 33.2998 14.6736 33.2998C12.8822 33.2998 10.9859 32.8281 9.25001 31.3974C9.25001 31.4498 9.25001 31.4992 9.25001 31.5547C9.25001 37.5918 15.6572 41.7019 21.3552 42.8458C20.1989 43.5272 17.8679 43.5951 16.7302 43.5951C15.9285 43.5951 13.0918 43.2282 12.3333 43.0863C13.9182 48.0351 19.6347 50.8162 25.0829 50.9149C20.8218 54.2572 17.8648 55.4967 9.13901 55.4967H6.16667C11.6797 59.0302 18.7004 61.6665 25.7366 61.6665C48.6458 61.6665 61.6667 44.2056 61.6667 27.7467C61.6667 27.4816 61.6605 26.9266 61.6513 26.3685C61.6513 26.313 61.6667 26.2606 61.6667 26.2051C61.6667 26.1218 61.642 26.0417 61.642 25.9584C61.6328 25.5391 61.6235 25.1475 61.6143 24.944C64.0501 23.1865 66.1622 20.9942 67.8333 18.4967C65.5979 19.4896 63.1991 20.1556 60.68 20.4577C63.2515 18.9161 66.9053 15.2407 67.8333 12.3301Z"
+                                            fill="#E50D42"
+                                        />
+                                    </svg>
+                                </a>
+                                <a href="#/" class="socials-link" data-lazy="bounce-left">
+                                    <svg
+                                        width="68"
+                                        height="68"
+                                        viewBox="0 0 68 68"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M53.8333 8.5H14.1667C11.0358 8.5 8.5 11.0358 8.5 14.1667V53.8333C8.5 56.9642 11.0358 59.5 14.1667 59.5H53.8333C56.9642 59.5 59.5 56.9642 59.5 53.8333V14.1667C59.5 11.0358 56.9642 8.5 53.8333 8.5ZM25.5 48.1667H18.3515V28.3333H25.5V48.1667ZM21.7997 24.6982C19.6152 24.6982 18.156 23.2418 18.156 21.2982C18.156 19.3545 19.6123 17.8982 22.0405 17.8982C24.225 17.8982 25.6842 19.3545 25.6842 21.2982C25.6842 23.2418 24.2278 24.6982 21.7997 24.6982ZM51 48.1667H44.081V37.3263C44.081 34.3287 42.2365 33.6373 41.5452 33.6373C40.8538 33.6373 38.5475 34.0992 38.5475 37.3263C38.5475 37.7882 38.5475 48.1667 38.5475 48.1667H31.399V28.3333H38.5475V31.1015C39.4683 29.4865 41.3128 28.3333 44.7723 28.3333C48.2318 28.3333 51 31.1015 51 37.3263V48.1667Z"
+                                            fill="#E50D42"
+                                        />
+                                    </svg>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-cover">
+                        <div class="cover-wrapper" data-lazy-block>
+                            <img class="image" src="/src/assets/images/zombie-4.png" alt="" data-lazy="bounce-down"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">Copyright © 2022. All Rights Reserved by Metasense</div>
+        </footer>
+
+        <script>
+            const LoadCover = (function () {
+                const blocks = document.querySelectorAll("[data-cover-src]");
+                if (!blocks || !blocks.length) return;
+                blocks.forEach((block) => {
+                    const cover = new Image();
+                    cover.src = block.dataset.coverSrc;
+                    cover.addEventListener("load", () => (block.style.backgroundImage = `url(${cover.src})`));
+                });
+            })();
+        </script>
+    </body>
+</html>

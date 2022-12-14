@@ -1,0 +1,352 @@
+// DEFAULT SETUP
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+::-webkit-scrollbar-thumb {
+    background-color: color(danger, 0.9);
+    border-radius: 50px;
+    &:hover {
+        background-color: color(danger);
+    }
+    // &:active {
+    //     background-color: color(danger);
+    // }
+}
+
+html {
+    // @include mq(1920px) {}//default 16px
+
+    @include mq(2560px) {
+        font-size: calc(16 * 100 / (1920 * 100 / 2560)) + px; //2k
+    }
+    @include mq(3840px) {
+        font-size: calc(16 * 100 / (1920 * 100 / 3840)) + px; //4k
+    }
+}
+
+body {
+    background-color: #000;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+img {
+    display: block;
+}
+
+// DISPLAYS
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+.display-1 {
+    font-size: calc(1.625rem + 4.5vw);
+}
+.display-2 {
+    // font-size: calc(1.575rem + 3.9vw);
+    font-size: 60px;
+    line-height: 0.8;
+    letter-spacing: 0.4rem;
+}
+.display-3 {
+    // font-size: calc(1.525rem + 3.3vw);
+    font-size: 36px;
+    letter-spacing: 0.2rem;
+}
+.display-4 {
+    // font-size: calc(1.475rem + 2.7vw);
+    font-size: 16px;
+    font-weight: 600;
+}
+.display-5 {
+    font-size: calc(1.425rem + 2.1vw);
+}
+.display-6 {
+    // font-size: calc(1.375rem + 1.5vw);
+    font-size: 13px;
+    font-weight: 300;
+}
+@media (min-width: 992px) {
+    .display-1 {
+        font-size: 5rem;
+    }
+    .display-2 {
+        // font-size: 4.5rem;
+        font-size: 128px;
+        letter-spacing: 0.7rem;
+    }
+    .display-3 {
+        // font-size: 4rem;
+        font-size: 64px;
+        letter-spacing: 0.4rem;
+    }
+    .display-4 {
+        // font-size: 3.5rem;
+        font-size: 32px;
+    }
+    .display-5 {
+        font-size: 3rem;
+    }
+    .display-6 {
+        // font-size: 2.5rem;
+        font-size: 24px;
+    }
+}
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: color(dark);
+}
+
+img {
+    max-width: 100%;
+}
+
+// CONTAINERS
+
+.container,
+.container-sm,
+.container-fluid {
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    @include mq(992px) {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+}
+
+.container {
+    // @include mq(576px) {
+    //     max-width: 540px; // 36
+    // }
+    // @include mq(768px) {
+    //     max-width: 720px; // 48
+    // }
+    // @include mq(992px) {
+    //     max-width: 960px; // 32
+    // }
+    @include mq(1200px) {
+        max-width: calc(1140px + 80px * 2); // 60
+    }
+    @include mq(1400px) {
+        max-width: calc(1320px + 80px * 2); // 80
+    }
+    // @include mq(1920px) {
+    //     max-width: mw(xl); //full hd
+    // }
+    // @include mq(2560px) {
+    //     max-width: 2400px; //2k
+    // }
+    // @include mq(3840px) {
+    //     max-width: 3700px; //4k
+    // }
+}
+
+.container-sm {
+    @include mq(1000px) {
+        max-width: calc(1090px + 80px * 2); // 60
+    }
+    // @include mq(1400px) {
+    //     max-width: calc(1320px + 80px * 2); // 80
+    // }
+}
+
+.container-fluid {
+    @include mq(2500px) {
+        max-width: calc(1500px + 0.75rem * 2); // 80
+    }
+}
+
+// BORDERS
+
+.border {
+    border: 1px solid color(dark);
+    &-primary {
+        border-color: color(primary);
+    }
+}
+
+// TEXTS
+
+.text {
+    &-primary {
+        color: color(primary) !important;
+    }
+    &-secondary {
+        color: color(secondary) !important;
+    }
+    &-success {
+        color: color(success) !important;
+    }
+    &-danger {
+        color: color(danger) !important;
+    }
+    &-dark {
+        color: color(dark) !important;
+    }
+    &-light {
+        color: color(light) !important;
+    }
+}
+
+//  BACKGROUNDS
+.bg {
+    &-dark {
+        background-color: color(dark);
+    }
+    &-light {
+        background-color: color(light);
+    }
+    &-primary {
+        background-color: color(primary);
+    }
+    &-secondary {
+        background: color(secondary);
+    }
+}
+
+// BORDER RADIUS
+
+.rounded {
+    &-circle {
+        padding: 0;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        @include df;
+    }
+    &-pill {
+        border-radius: 50rem !important;
+    }
+}
+
+// DISPLAY
+
+.d {
+    &-none {
+        display: none !important;
+    }
+    &-block {
+        display: block !important;
+        width: 100%; //button tags not extending
+    }
+    &-flex {
+        display: flex !important;
+    }
+}
+
+// BADGE
+
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+// CONDITIONAL
+
+.brush-btn {
+    position: relative;
+    display: inline-block;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+    a {
+        padding: 30px 50px !important;
+        position: relative;
+        font-family: "Mersery Cowboy";
+        font-size: 55px !important;
+        color: #fff;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        display: block;
+        text-transform: capitalize !important;
+        white-space: nowrap;
+        transition: 0.3s ease !important;
+        &:hover {
+            color: color(dark);
+        }
+    }
+    &:hover:not(:active) {
+        img {
+            transform: scale(1.05);
+        }
+    }
+    &-lg {
+        a {
+            padding: 23px 60px !important;
+            font-size: 56px !important;
+            letter-spacing: 0.4rem;
+            @include mq(768px) {
+                padding: 33px 90px !important;
+                font-size: 73px !important;
+            }
+        }
+    }
+}
+
+section,
+footer {
+    padding: 4rem 0;
+}
+
+@include mq(576px) {
+    section,
+    footer {
+        // padding: 4rem 0;
+    }
+}
+
+@include mq(992px) {
+    section,
+    footer {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+    }
+}

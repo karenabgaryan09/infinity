@@ -1,0 +1,23 @@
+// PARTIALS
+@import "./partials/features";
+@import './partials/basic';
+
+// COMPONENTS
+@import '../components/header/header';
+@import '../components/footer/footer';
+@import '../components/button/button';
+// @import '../components/field/field';
+@import '../components/navbar/navbar';
+@import '../components/swiper/swiper';
+
+// SCRIPTS
+@import '../scripts/lazy-load/lazy-load';
+
+// PAGES
+@import '../pages/home/home';
+@import '../pages/about/about';
+@import '../pages/error/error';
+
+// REST
+@import '../assets/fonts/fonts';
+

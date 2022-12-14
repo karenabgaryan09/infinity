@@ -1,0 +1,94 @@
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 400;
+    background: none;
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    color: color(dark);
+    border-color: rgba(0, 0, 0, 0.23);
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &:hover {
+        border-color: rgba(0, 0, 0, 0.87);
+    }
+    &:focus {
+        border-color: color(primary);
+    }
+    &-light {
+        border-color: color(light,0.5);
+        color: color(light);
+        &::placeholder {
+            color: color(light,0.5);
+        }
+        &:hover {
+            border-color: color(light,0.7);
+        }
+        &:focus {
+            border-color: color(light);
+        }
+    }
+
+}
+
+.was-validated {
+    .form-control {
+        &:valid {
+            border-color: color(success);
+            & ~ .valid-feedback {
+                display: block;
+            }
+        }
+        &:invalid {
+            border-color: color(danger);
+            & ~ .invalid-feedback {
+                display: block;
+            }
+        }
+    
+    }
+
+}
+
+.was-submitted {
+    .is-valid{
+        border-color: color(success);
+        & ~ .valid-feedback {
+            display: block;
+        }
+    }
+    .is-invalid{
+        border-color: color(danger);
+        & ~ .invalid-feedback{
+            display: block;
+        }
+    }
+
+}
+
+label {
+    display: inline-block;
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+}
+
+.valid-feedback,
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: .875em;
+}
+.valid-feedback {
+    color: color(success);
+}
+.invalid-feedback {
+    color: color(danger);
+}

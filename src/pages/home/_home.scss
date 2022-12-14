@@ -1,0 +1,650 @@
+// TRAILER
+.trailer {
+    background-image: url("/src/assets/images/trailer-cover.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-title {
+        color: #fff;
+        font-family: "Mersery Cowboy";
+        margin-bottom: 1.5rem;
+    }
+    &-wrapper {
+        display: grid;
+        gap: 1rem;
+        align-items: end;
+    }
+    &-content {
+        & > .wrapper {
+            z-index: 1;
+            position: relative;
+        }
+    }
+    &-description {
+        max-width: 333px;
+        color: #fff;
+        font-size: 14px;
+        margin-bottom: 90px;
+        &-inner {
+            display: none;
+        }
+        &:first-letter {
+            text-transform: uppercase;
+        }
+    }
+    .video-wrapper {
+        position: relative;
+        border: 12px solid rgba(255, 255, 255, 0.6);
+        border-width: 6px 7.5px 6px;
+        border-radius: 15px;
+        overflow: hidden;
+        height: 0;
+        width: 100%;
+        // padding-top: 60%;
+        padding-top: 55%;
+        cursor: pointer;
+
+        &:hover:not(:active) {
+            .play {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+        video {
+            width: 100%;
+        }
+        img {
+            position: absolute;
+            display: block;
+        }
+        .video-placeholder {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .play {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 15%;
+            transition: transform 0.3s ease;
+        }
+    }
+    &-image {
+        .image-wrapper {
+            position: relative;
+            width: 50%;
+            padding-top: 120%;
+            margin: 0 auto;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+}
+
+@include mq(768px) {
+    .trailer {
+        &-title {
+            text-align: center;
+        }
+        &-content {
+            & > .wrapper {
+                width: 90%;
+            }
+        }
+        &-description {
+            text-align: center;
+            max-width: none;
+            margin-bottom: 2rem;
+            &-inner {
+                display: block;
+            }
+        }
+        &-wrapper {
+            grid-template-columns: 81% 19%;
+        }
+        &-image {
+            .image-wrapper {
+                // margin: 0;
+                margin-left: -100px;
+                margin-bottom: -35px;
+                width: 146%;
+                padding-top: 337%;
+            }
+        }
+        .video-wrapper {
+            border-radius: 50px;
+            border-width: 12px 15px 12px;
+            .play {
+                width: 13%;
+            }
+        }
+    }
+}
+
+@include mq(992px) {
+    .trailer {
+        &-title {
+            margin-bottom: 2.5rem;
+        }
+        &-description {
+            font-size: 24px;
+        }
+    }
+}
+
+// NFT
+.nft {
+    background-image: url("/src/assets/images/nft-cover.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-wrapper {
+        // grid-template-columns: 1fr;
+    }
+    &-content {
+        & > .wrapper {
+            max-width: fit-content;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+        }
+    }
+    &-title {
+        position: relative;
+        color: #fff;
+        font-family: "Mersery Cowboy";
+        margin-bottom: 1.5rem;
+    }
+    &-list {
+    }
+    &-item {
+        color: #fff;
+        position: relative;
+        padding-left: 25px;
+        font-size: 14px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+            background-color: color(success);
+        }
+    }
+    &-cover {
+        display: none;
+        .cover-wrapper {
+            position: relative;
+            width: 50%;
+            padding-top: 120%;
+            margin: 0 auto;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+    &-content {
+        // max-width: 400px;
+    }
+
+    .swiper {
+        padding-top: 40px;
+        padding-bottom: 85px;
+        margin-bottom: 40px;
+        .swiper-slide {
+            transition: transform 0.3s ease;
+        }
+
+        .nft-image-wrapper {
+            width: 100%;
+            padding-top: 100%;
+            height: 0;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .nft-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .btn-center {
+        text-align: center;
+    }
+}
+
+@include mq(768px) {
+    .nft {
+        &-wrapper {
+            display: grid;
+            grid-template-columns: 40% 60%;
+        }
+        &-item {
+        }
+        &-cover {
+            display: block;
+            .cover-wrapper {
+                margin-left: 0;
+                margin-bottom: 0;
+                width: 112%;
+                padding-top: 154%;
+            }
+        }
+        .swiper {
+            .swiper-slide-next {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@include mq(992px) {
+    .nft {
+        &-title {
+            margin-bottom: 2.5rem;
+        }
+        &-item {
+            font-size: 24px;
+            padding-left: 45px;
+            &:before {
+                width: 17px;
+                height: 17px;
+            }
+        }
+        .swiper {
+            .nft-image-wrapper {
+                border-radius: 30px;
+            }
+        }
+    }
+}
+
+// ROAD MAP
+.road-map {
+    background-image: url("/src/assets/images/road-map-cover.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-title {
+        color: #fff;
+        font-family: "Mersery Cowboy";
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .phase {
+        &-group {
+            display: grid;
+            grid-gap: 50px 100px;
+            justify-content: space-between;
+        }
+        &-title {
+            white-space: nowrap;
+            color: #fff;
+            font-family: "Mersery Cowboy";
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 1rem;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                background-color: color(success);
+            }
+        }
+        &-item {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            padding-left: 20px;
+            position: relative;
+            max-width: 234px;
+            margin-bottom: 1rem;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 0;
+                border-radius: 50%;
+                width: 5px;
+                height: 5px;
+                background-color: #fff;
+            }
+            &:first-letter {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@include mq(420px) {
+    .road-map {
+        .phase {
+            &-group {
+            }
+            &:last-of-type {
+                grid-column: 2 span;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@include mq(768px) {
+    .road-map {
+        &-title {
+            margin-bottom: 8rem;
+        }
+        .phase {
+            &-group {
+                grid-template-columns: auto auto;
+                justify-content: center;
+            }
+            &-title {
+                margin-bottom: 2rem;
+            }
+            &-item {
+            }
+        }
+    }
+}
+
+@include mq(992px) {
+    .road-map {
+        .phase {
+            &-group {
+            }
+            &-title {
+                padding-left: 80px;
+                &:before {
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+            &-item {
+                font-size: 24px;
+                margin-bottom: 1.85rem;
+                padding-left: 27px;
+                &:before {
+                    top: 12px;
+                    width: 7px;
+                    height: 7px;
+                }
+            }
+        }
+    }
+}
+
+@include mq(1180px) {
+    .road-map {
+        &-title {
+        }
+        .phase {
+            &-group {
+                justify-content: space-between;
+
+                grid-template-columns: auto auto auto;
+            }
+
+            &:last-of-type {
+                grid-column: 1 span;
+                display: block;
+            }
+        }
+    }
+}
+
+// TEAM MEMBERS
+.team-members {
+    background-image: url("/src/assets/images/team-members-cover.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-title {
+        color: #fff;
+        font-family: "Mersery Cowboy";
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    &-wrapper {
+        display: grid;
+        align-items: end;
+    }
+    &-cover {
+        width: 75%;
+        padding-top: 142%;
+        height: 0;
+        margin: 0 auto;
+        position: relative;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .zombie-card-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        grid-gap: 53px 20px;
+        margin-bottom: 100px;
+    }
+    .zombie-card {
+        color: #fff;
+        text-transform: capitalize;
+        text-align: center;
+        max-width: 200px;
+        &:nth-of-type(5),
+        &:nth-of-type(6),
+        &:nth-of-type(7),
+        &:nth-of-type(8)  {
+            display: none;
+        }
+        .card {
+            &-image-wrapper {
+                width: 82%;
+                height: 0;
+                padding-top: 82%;
+                margin: 0 auto;
+                position: relative;
+                border-radius: 50%;
+                overflow: hidden;
+                background-color: color(light);
+                margin-bottom: 1rem;
+            }
+            &-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &-title {
+                font-size: 16px;
+                white-space: nowrap;
+            }
+            &-subtitle {
+                font-size: 13px;
+                white-space: nowrap;
+                margin-bottom: 1rem;
+            }
+            &-icon {
+                width: 15px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@include mq(420px) {
+    .team-members {
+        .zombie-card-group {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .zombie-card {
+            &:nth-of-type(5),
+            &:nth-of-type(6) {
+                display: block;
+            }
+        }
+    }
+}
+
+@include mq(768px) {
+    .team-members {
+        &-wrapper {
+            // grid-template-columns: 21% 79%;
+            grid-template-columns: 16% 84%;
+        }
+        &-cover {
+            // width: 148%;
+            // padding-top: 280%;
+            // margin-left: -44%;
+            width: 183%;
+            padding-top: 345%;
+            margin-left: -80%;
+        }
+        &-title {
+            margin-bottom: 3rem;
+            margin-left: 10%;
+        }
+
+        .zombie-card-group {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .zombie-card {
+            .card {
+                &-image-wrapper {
+                    margin-bottom: 1.8rem;
+                }
+                &-title {
+                    margin-bottom: 0.3rem;
+                }
+                &-subtitle {
+                    margin-bottom: 0.5rem;
+                }
+                &-icon {
+                    width: 30px;
+                }
+            }
+            &:nth-of-type(7),
+            &:nth-of-type(8) {
+                display: block;
+            }
+        }
+    }
+}
+
+@include mq(1400px) {
+    .team-members {
+        &-title {
+        }
+        .zombie-card {
+            .card {
+                &-title {
+                    font-size: 32px;
+                }
+                &-subtitle {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+// INVESTORS
+.investors {
+    background-image: url("/src/assets/images/investors-cover.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-title {
+        position: relative;
+        color: #fff;
+        font-family: "Mersery Cowboy";
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+    &-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:55px 25px;
+        margin-bottom: 4rem;
+    }
+    &-item:last-of-type {
+        display: none;
+    }
+    &-cover {
+        .cover-wrapper {
+            position: relative;
+            width: 74%;
+            padding-top: 100%;
+            margin: 0 auto;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+}
+
+@include mq(768px) {
+    .investors {
+        &-title {
+            margin-bottom: 8rem;
+        }
+        &-list {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:95px 55px;
+            margin-bottom: 0;
+        }
+        &-item:last-of-type {
+            display: block;
+        }
+        &-cover {
+            display: none;
+        }
+    }
+}

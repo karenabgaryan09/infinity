@@ -1,0 +1,100 @@
+// COLORS
+$colors: (
+    primary: "25, 118, 210",             
+    primary-hover: "21, 101, 192",             
+    primary-v2: "21, 101, 192",
+    info: "13, 202, 240",
+    success: "183,193,60",
+    success-hover: "27, 94, 32",
+    success-v2: "27, 94, 32",
+    warning: "237, 108, 2",
+    warning-hover: "202, 91, 0",
+    warning-v2: "202, 91, 0",
+    danger: "229, 13, 66",
+    danger-hover: "188, 22, 22",
+    danger-v2: "188, 22, 22",
+    dark: "10, 33, 28",
+    secondary: "108, 117, 125",
+    secondary-hover: "85, 91, 96",
+    secondary-v2: "85, 91, 96",
+    light: "217, 217, 217",
+    light-hover: '221, 223, 226',
+    light-v2: '221, 223, 226',
+    muted: "108, 117, 125",
+);
+
+@function color($property: primary, $a: 1) {
+    $color: map-get($colors, $property);
+    @return #{'rgba(#{$color},#{$a})'};
+}
+
+//  FONT SIZES
+$fontSizes: (
+    sm: 0.8rem,
+    md: 1rem,
+    lg: 1.2rem,
+);
+
+@function fontSize($property: md) {
+    @return map-get($fontSizes, $property);
+}
+
+// GRADIENTS
+$gradients: (
+    primary: linear-gradient(180deg, color(info), color(success)),
+);
+
+@function gradient($property: primary) {
+    @return map-get($gradients, $property);
+}
+
+// SHADOWS
+$shadows: (
+    success: 0 3px 10px rgba(37, 174, 21, 1),
+);
+
+@function shadow($property: success) {
+    @return map-get($shadows, $property);
+}
+
+// BREAKPOINTS
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 3840px,
+);
+
+@mixin mq($size: 768px) {
+    @media screen and (min-width: #{$size}) {
+        @content;
+    }
+}
+
+@function breakpoint($property: md) {
+    @return map-get($grid-breakpoints, $property);
+}
+
+// MIXINS
+
+@mixin df($horizontal: center, $vertical: center) {
+    display: flex;
+    justify-content: $horizontal;
+    align-items: $vertical;
+}
+
+@mixin pos($type: absolute) {
+    position: $type;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin text() {
+    line-height: 1.5;
+    color: color(secondary);
+    letter-spacing: 0.03em;
+}

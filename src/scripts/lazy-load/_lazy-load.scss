@@ -1,0 +1,214 @@
+// @media screen and (min-width: 576px) {
+[data-lazy] {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition-property: opacity, transform !important;
+    transition-timing-function: ease-in, ease-out !important;
+    transition-duration: 0.7s !important;
+    // transition-timing-function: cubic-bezier(.175,.885,.32,1.275);
+}
+
+[data-lazy="fade-up"] {
+    transform: translate3d(0, 100px, 0);
+}
+[data-lazy="fade-right"] {
+    transform: translate3d(-100px, 0, 0);
+}
+[data-lazy="fade-left"] {
+    transform: translate3d(100px, 0, 0);
+}
+[data-lazy="scale"] {
+    transform: scale(0);
+}
+[data-lazy="fade-up-30"] {
+    transform: translate3d(0, 30px, 0);
+}
+[data-lazy="fade-down"] {
+    transform: translate3d(0, -100px, 0);
+}
+[data-lazy="scale"] {
+    transform: scale(0.1);
+}
+[data-lazy="bounce-left"].lazy-animate {
+    animation: bounce-right 0.8s both;
+}
+[data-lazy="bounce-right"].lazy-animate {
+    animation: bounce-left 0.8s both;
+}
+[data-lazy="bounce-down"].lazy-animate {
+    animation: bounce-top 0.9s both;
+}
+[data-lazy="bounce-up"].lazy-animate {
+    animation: bounce-bottom 0.9s both;
+}
+
+.lazy-animate {
+    opacity: 1;
+    transform: translateZ(0);
+}
+
+// }
+
+header,
+main,
+footer {
+    overflow: hidden;
+}
+
+@keyframes bounce-left {
+    0% {
+        transform: translateX(-48px);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    24% {
+        opacity: 1;
+    }
+    40% {
+        transform: translateX(-26px);
+        animation-timing-function: ease-in;
+    }
+    65% {
+        transform: translateX(-13px);
+        animation-timing-function: ease-in;
+    }
+    82% {
+        transform: translateX(-6.5px);
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateX(-4px);
+        animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87%,
+    98% {
+        transform: translateX(0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateX(0px);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+}
+
+@keyframes bounce-right {
+    0% {
+        transform: translateX(48px);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    24% {
+        opacity: 1;
+    }
+    40% {
+        transform: translateX(26px);
+        animation-timing-function: ease-in;
+    }
+    65% {
+        transform: translateX(13px);
+        animation-timing-function: ease-in;
+    }
+    82% {
+        transform: translateX(6.5px);
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateX(4px);
+        animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87%,
+    98% {
+        transform: translateX(0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateX(0px);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+}
+
+  @keyframes bounce-bottom {
+    0% {
+      transform: translateY(45px);
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    24% {
+      opacity: 1;
+    }
+    40% {
+      transform: translateY(24px);
+      animation-timing-function: ease-in;
+    }
+    65% {
+      transform: translateY(12px);
+      animation-timing-function: ease-in;
+    }
+    82% {
+      transform: translateY(6px);
+      animation-timing-function: ease-in;
+    }
+    93% {
+      transform: translateY(4px);
+      animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+      transform: translateY(0px);
+      animation-timing-function: ease-out;
+    }
+    100% {
+      transform: translateY(0px);
+      animation-timing-function: ease-out;
+      opacity: 1;
+    }
+  }
+
+@keyframes bounce-top {
+    0% {
+        transform: translateY(-45px);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    24% {
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-24px);
+        animation-timing-function: ease-in;
+    }
+    65% {
+        transform: translateY(-12px);
+        animation-timing-function: ease-in;
+    }
+    82% {
+        transform: translateY(-6px);
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateY(-4px);
+        animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+}
