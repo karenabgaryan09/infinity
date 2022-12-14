@@ -1869,7 +1869,7 @@ footer {
     width: 112%;
     padding-top: 154%;
   }
-  .nft .swiper .swiper-slide-next {
+  .nft .swiper .swiper-slide-active {
     transform: scale(1.1);
   }
 }
