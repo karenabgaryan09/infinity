@@ -531,7 +531,7 @@ footer {
 .footer .socials-link {
   flex: 1;
 }
-.footer .socials-link:hover {
+.footer .socials-link:hover svg {
   -webkit-animation: jello-horizontal 0.9s both;
           animation: jello-horizontal 0.9s both;
 }

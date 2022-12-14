@@ -43,7 +43,10 @@
         &-link {
             flex: 1;
             &:hover {
-                animation: jello-horizontal 0.9s both;
+                svg {
+
+                    animation: jello-horizontal 0.9s both;
+                }
             }
         }
 
