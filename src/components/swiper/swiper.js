@@ -3,6 +3,7 @@ const swiperInHomePage = new Swiper("#nft-swiper .swiper", {
     // slidesPerGroup:4,
     spaceBetween:30,
     centeredSlides: true,
+    initialSlide: 1,
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
