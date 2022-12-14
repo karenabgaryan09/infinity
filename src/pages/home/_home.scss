@@ -485,7 +485,7 @@
                 background-color: color(light);
                 margin-bottom: 1rem;
                 cursor: pointer;
-                &:hover {
+                &:hover:not(:active) {
                     &:after,
                     &:before {
                         opacity: 1;

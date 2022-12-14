@@ -2059,13 +2059,13 @@ footer {
   margin-bottom: 1rem;
   cursor: pointer;
 }
-.team-members .zombie-card .card-image-wrapper:hover:after, .team-members .zombie-card .card-image-wrapper:hover:before {
+.team-members .zombie-card .card-image-wrapper:hover:not(:active):after, .team-members .zombie-card .card-image-wrapper:hover:not(:active):before {
   opacity: 1;
 }
-.team-members .zombie-card .card-image-wrapper:hover:before {
+.team-members .zombie-card .card-image-wrapper:hover:not(:active):before {
   transform: translate(-50%, -50%);
 }
-.team-members .zombie-card .card-image-wrapper:hover:after {
+.team-members .zombie-card .card-image-wrapper:hover:not(:active):after {
   transform: translate(-50%, -50%) rotateZ(90deg);
 }
 .team-members .zombie-card .card-image-wrapper:after, .team-members .zombie-card .card-image-wrapper:before {
