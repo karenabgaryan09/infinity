@@ -381,7 +381,7 @@
             <section class="road-map" data-lazy-block>
                 <div class="container-sm">
                     <h2 class="display-2 road-map-title">road <span class="text-danger">map</span></h2>
-                    <div class="phase-group" >
+                    <div class="phase-group">
                         <div class="phase" data-lazy="fade-right" data-lazy-delay="300">
                             <h3 class="phase-title display-3">phase 1</h3>
                             <ul class="phase-list">
@@ -424,56 +424,80 @@
                     <div class="team-members-wrapper">
                         <div class="card-group zombie-card-group">
                             <div class="card zombie-card">
-                                <div class="card-image-wrapper"></div>
+                                <label class="card-image-wrapper">
+                                    <input type="file" class="file-input" />
+                                    <img src="" class="card-image" />
+                                </label>
                                 <h4 class="card-title display-4">lorem ipsum</h4>
                                 <h6 class="card-subtitle display-6">lorem ipsum</h6>
                                 <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
                             </div>
                             <div class="card zombie-card">
-                                <div class="card-image-wrapper"></div>
+                                <label class="card-image-wrapper">
+                                    <input type="file" class="file-input" />
+                                    <img src="" class="card-image" />
+                                </label>
                                 <h4 class="card-title display-4">lorem ipsum</h4>
                                 <h6 class="card-subtitle display-6">lorem ipsum</h6>
                                 <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
                             </div>
                             <div class="card zombie-card">
-                                <div class="card-image-wrapper"></div>
+                                <label class="card-image-wrapper">
+                                    <input type="file" class="file-input" />
+                                    <img src="" class="card-image" />
+                                </label>
                                 <h4 class="card-title display-4">lorem ipsum</h4>
                                 <h6 class="card-subtitle display-6">lorem ipsum</h6>
                                 <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
                             </div>
                             <div class="card zombie-card">
-                                <div class="card-image-wrapper"></div>
+                                <label class="card-image-wrapper">
+                                    <input type="file" class="file-input" />
+                                    <img src="" class="card-image" />
+                                </label>
                                 <h4 class="card-title display-4">lorem ipsum</h4>
                                 <h6 class="card-subtitle display-6">lorem ipsum</h6>
                                 <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
                             </div>
                             <div class="card zombie-card">
-                                <div class="card-image-wrapper"></div>
+                                <label class="card-image-wrapper">
+                                    <input type="file" class="file-input" />
+                                    <img src="" class="card-image" />
+                                </label>
                                 <h4 class="card-title display-4">lorem ipsum</h4>
                                 <h6 class="card-subtitle display-6">lorem ipsum</h6>
                                 <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
                             </div>
                             <div class="card zombie-card">
-                                <div class="card-image-wrapper"></div>
+                                <label class="card-image-wrapper">
+                                    <input type="file" class="file-input" />
+                                    <img src="" class="card-image" />
+                                </label>
                                 <h4 class="card-title display-4">lorem ipsum</h4>
                                 <h6 class="card-subtitle display-6">lorem ipsum</h6>
                                 <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
                             </div>
                             <div class="card zombie-card">
-                                <div class="card-image-wrapper"></div>
+                                <label class="card-image-wrapper">
+                                    <input type="file" class="file-input" />
+                                    <img src="" class="card-image" />
+                                </label>
                                 <h4 class="card-title display-4">lorem ipsum</h4>
                                 <h6 class="card-subtitle display-6">lorem ipsum</h6>
                                 <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
                             </div>
                             <div class="card zombie-card">
-                                <div class="card-image-wrapper"></div>
+                                <label class="card-image-wrapper">
+                                    <input type="file" class="file-input" />
+                                    <img src="" class="card-image" />
+                                </label>
                                 <h4 class="card-title display-4">lorem ipsum</h4>
                                 <h6 class="card-subtitle display-6">lorem ipsum</h6>
                                 <img src="/src/assets/images/icons/in.png" alt="" class="card-icon" />
                             </div>
                         </div>
                         <div class="team-members-cover" data-lazy-block="">
-                            <img src="/src/assets/images/zombie-3.png" alt="" data-lazy="bounce-right"/>
+                            <img src="/src/assets/images/zombie-3.png" alt="" data-lazy="bounce-right" />
                         </div>
                     </div>
                 </div>
@@ -523,7 +547,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer-wrapper">
-                    <div class="footer-content" >
+                    <div class="footer-content">
                         <img class="footer-banner" src="/src/assets/images/icons/banner.png" alt="" />
                         <p class="footer-description">
                             All character depicted on this site and in the Z-Infinity Game are the original work of our
@@ -592,7 +616,7 @@
                     </div>
                     <div class="footer-cover">
                         <div class="cover-wrapper" data-lazy-block>
-                            <img class="image" src="/src/assets/images/zombie-4.png" alt="" data-lazy="bounce-down"/>
+                            <img class="image" src="/src/assets/images/zombie-4.png" alt="" data-lazy="bounce-down" />
                         </div>
                     </div>
                 </div>
@@ -610,6 +634,21 @@
                     cover.addEventListener("load", () => (block.style.backgroundImage = `url(${cover.src})`));
                 });
             })();
+
+            const fileInputs = document.querySelectorAll(".file-input");
+            // const images = document.querySelector(".file-image");
+            fileInputs.forEach((fileInput) => {
+                fileInput.addEventListener("change", (e) => {
+                    const reader = new FileReader();
+                    reader.readAsDataURL(e.target.files[0]);
+                    reader.onload = () => {
+                      const image =   e.target.nextElementSibling
+                      image.src = reader.result;
+                      image.parentElement.style.backgroundColor = 'transparent'
+                      image.parentElement.style.cursor = 'auto'
+                    };
+                });
+            });
         </script>
     </body>
 </html>
