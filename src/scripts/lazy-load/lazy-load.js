@@ -3,7 +3,7 @@ const LazyLoad = (function () {
     let blocks = null;
     let options = {
         root: null,
-        threshold: 0.8,
+        threshold: window.innerWidth > 900 ? 0.8 : 0.6,
         rootMargin: window.innerWidth > 576 ? "0px" : "0px",
     };
 
