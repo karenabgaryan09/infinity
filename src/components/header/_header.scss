@@ -1,5 +1,6 @@
 .hero {
-    min-height: 100vh;
+    // min-height: 100vh;
+    min-height: 100vmin;
     background-color: rgba(0, 0, 0, 0.1);
     background-image: url("/src/assets/images/header-cover-thumbnail.jpg");
     background-size: cover;
@@ -16,7 +17,7 @@
     &-wrapper {
         display: grid;
         // grid-template-columns: 550px auto;
-        align-items: end;
+        // align-items: end;
         align-content: end;
         flex: 1;
         // grid-gap:0 4rem;
@@ -24,22 +25,39 @@
     &-content {
         color: #fff;
     }
-    &-banner {
-        width: 75%;
-        display: block;
-        margin: 0 auto -1rem;
+    &-banner-wrapper {
+        position: relative;
+        height: 0;
+        padding-top: 60%;
+        width: 100%;
+        margin-bottom: 30px;
         display: none;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+    &-banner {
+        // width: 75%;
+        // display: block;
+        // margin: 0 auto -1rem;
+        // display: none;
     }
     &-description {
         font-size: 1rem;
         font-weight: regular;
         max-width: 270px;
-        margin:  0 auto 2rem;
+        margin: 0 auto 1rem;
     }
 
     .socials {
         position: relative;
-        margin-bottom: 2.5rem;
+        margin-bottom: 4rem;
         &-img {
             display: block;
             margin: 0 auto;
@@ -60,7 +78,7 @@
             text-transform: capitalize;
             display: flex;
             align-items: center;
-            transition: .3s ease;
+            transition: 0.3s ease;
             &:hover {
                 // color: color(success);
                 color: #111;
@@ -73,13 +91,12 @@
         .startIcon {
             width: 30px;
             display: block;
-            
+
             svg {
                 width: 100%;
                 display: block;
                 path {
-
-                    transition: .3s ease;
+                    transition: 0.3s ease;
                 }
             }
         }
@@ -94,7 +111,7 @@
             position: relative;
             height: 0;
             width: 100%;
-            padding-top:70%;
+            padding-top: 70%;
             .img {
                 position: absolute;
                 top: 0;
@@ -128,15 +145,13 @@
 @include mq(768px) {
     .hero {
         &-wrapper {
-        
         }
         &-images {
             .image-group {
-
-                padding-top: 100%;
+                padding-top: 90%;
             }
         }
-         &-description {
+        &-description {
             font-size: 24px;
             max-width: 450px;
             text-align: center;
@@ -169,7 +184,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px){
+@media screen and (min-width: 768px) and (max-width: 992px) {
     .hero {
         .socials {
             .startIcon {
@@ -177,13 +192,11 @@
             }
             &-list {
                 gap: 30px;
-
             }
             &-link {
                 font-size: 33px;
             }
         }
-
     }
 }
 
@@ -196,10 +209,10 @@
         &-description {
             margin: 0;
             max-width: none;
-            margin-bottom: 5rem;
+            margin-bottom: 2rem;
             text-align: left;
         }
-        &-banner {
+        &-banner-wrapper {
             display: block;
         }
         &-images {
@@ -215,11 +228,9 @@
                         height: auto;
                         object-fit: fill;
                     }
-                   
                 }
             }
         }
-       
     }
 }
 @include mq(1280px) {
